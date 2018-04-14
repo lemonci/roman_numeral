@@ -1,0 +1,11 @@
+def convert(roman)
+  store = list(roman)
+  dict = {'M': 1000, 'D': 500, 'C': 100, 'L': 50, 'X': 10, 'V': 5, 'I': 1}
+  numbers = []    
+  for i in store:
+    numbers.append(dict[i])
+  for i in range(len(store)-1):
+    if numbers[i]<numbers[i+1]:
+       numbers[i] = -numbers[i]
+  arab = sum(numbers)
+  print(arab)
